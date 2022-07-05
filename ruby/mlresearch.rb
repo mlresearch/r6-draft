@@ -279,14 +279,14 @@ module MLResearch
       software_data = Hash[*CSV.read(software_file).flatten]
     end
 
-    # Extract information about software links from a csv file.
+    # Extract information about video links from a csv file.
     if video_file.nil?
       video_data = nil
     else
       video_data = Hash[*CSV.read(video_file).flatten]
     end
 
-    # Extract information about software links from a csv file.
+    # Extract information about supplementary links from a csv file.
     if supp_file.nil?
       supp_data = nil
     else
@@ -378,6 +378,11 @@ module MLResearch
       if not ha.has_key?('video') and not video_data.nil? and video_data.has_key?(ha['id'])
           ha['video'] = video_data[ha['id']]
       end
+      # Add supplementary link if it is available.
+      if not ha.has_key?('supp') and not supp_data.nil? and supp_data.has_key?(ha['id'])
+          ha['supp'] = supp_data[ha['id']]
+      end
+      
       # Move all supplementary files to relevant directory
       Dir.glob(ha['id'] +'-supp.*') do |supp_file|
         newfilename =  supp_file.gsub(ha['id'], filestub)
