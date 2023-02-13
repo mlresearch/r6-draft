@@ -505,7 +505,7 @@ module MLResearch
     ha['markdown'] = 'kramdown'
     ha['exclude'] = ['README.md', 'Gemfile', '.gitignore']
     ha['plugins'] = ['jekyll-feed', 'jekyll-seo-tag', 'jekyll-remote-theme']
-    ha['remote_theme'] = 'lawrennd/proceedings'
+    ha['remote_theme'] = 'mlresearch/jekyll-theme'
     ha['style'] = 'pmlr'
     ha['permalink'] = '/:title.html'
     ha['ghub'] = {'edit' => true, 'repository' => reponame}
