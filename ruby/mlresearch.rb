@@ -429,7 +429,7 @@ module MLResearch
       fname = filename(published, filestub)
       out = File.open('_posts/' + fname, 'w')
       out.puts ya
-      out.puts "# Format based on citeproc: http://blog.martinfenner.org/2013/07/30/citeproc-yaml-for-bibliographies/"
+      out.puts "# Format based on Martin Fenner's citeproc: https://blog.front-matter.io/posts/citeproc-yaml-for-bibliographies/"
       out.puts "---"
     end  
   end
@@ -509,7 +509,7 @@ module MLResearch
     ha['markdown'] = 'kramdown'
     ha['exclude'] = ['README.md', 'Gemfile', '.gitignore']
     ha['plugins'] = ['jekyll-feed', 'jekyll-seo-tag', 'jekyll-remote-theme']
-    ha['remote_theme'] = 'lawrennd/proceedings'
+    ha['remote_theme'] = 'mlresearch/jekyll-theme'
     ha['style'] = 'pmlr'
     ha['permalink'] = '/:title.html'
     ha['ghub'] = {'edit' => true, 'repository' => reponame}

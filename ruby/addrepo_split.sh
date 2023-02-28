@@ -9,5 +9,9 @@ git push --set-upstream origin gh-pages
 for letter in {a..z}
 do git add $letter*
    git commit -a -m "Add $1 pages"
-   git push
+   if git push; then
+       continue
+   else
+       break
+   fi
 done
