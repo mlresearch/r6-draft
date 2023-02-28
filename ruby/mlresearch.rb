@@ -369,6 +369,7 @@ module MLResearch
           raise "PDF " + filestub + '/' + filestub + '.pdf' + " file not present"
         end
       end
+
       
       # Add software link if it is available.
       if not ha.has_key?('software') and not software_data.nil? and software_data.has_key?(ha['id'])
@@ -397,11 +398,11 @@ module MLResearch
         supple = filestub + '-supp.pdf'
       end
 
+      ha['extras'] = []
       # Link to all -supp files in directory
-      if inc_layout
+      if inc_layout # deal with non conformant volumes.
         ha['supplementary'] = 'https://proceedings.mlr.press' + '/' + volume_info['volume_dir'] + '/' + supple
       else
-        ha['extras'] = []
         Dir.glob(filestub + '/' + filestub +'-supp.*') do |supp_file|
           ha['extras'] += [{'label' => 'Supplementary ' + File.extname(supp_file)[1..-1].upcase, 'link' => 'https://proceedings.mlr.press' + '/' + volume_info['volume_dir'] + '/' + supp_file}]
         end
@@ -413,7 +414,10 @@ module MLResearch
           ha['extras'] += [{'label' => supp_name, 'link'=> supp_data[ha['id']]}]
         end
       end
-
+      if ha.has_key?('other_files')
+        ha['extras'] += [{'label' => "Other Files", 'link' => ha['other_files']}]
+        ha.delete('other_files')
+      end
         
         
       # If it's not in the bad layout then update key
