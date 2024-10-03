@@ -1,0 +1,80 @@
+---
+booktitle: Proceedings of the 24th Conference on Uncertainty in Artificial Intelligence
+shortname: UAI
+start: 2008-07-09
+end: 2008-07-12
+url: https://proceedings.mlr.press
+firstpublished: 2008-07-09
+published: 2024-10-30
+layout: proceedings
+series: Proceedings of Machine Learning Research
+publisher: PMLR
+issn: XXX
+id: uai2008
+month: 0
+cycles: false
+bibtex_editor: McAllester, David A. and Myllymäki, Petri
+editor:
+- given: David A.
+  family: McAllester
+- given: Petri
+  family: Myllymäki
+title: Proceedings of Machine Learning Research
+description: |
+  Proceedings of the 24th Conference on Uncertainty in Artificial Intelligence
+    Held in the University of Helsinki City Centre Campus, Helsinki on 09-12 July 2008
+
+  Published as Reissue 6 by the Proceedings of Machine Learning Research on 30 October 2024.
+
+  Volume Edited by:
+    David A. McAllester
+    Petri Myllymäki
+
+  Series Editors:
+    Neil D. Lawrence
+date_str: 09--12 Jul
+author:
+  name: PMLR
+baseurl: "/r6"
+twitter_username: MLResearchPress
+github_username: mlresearch
+markdown: kramdown
+exclude:
+- README.md
+- Gemfile
+- ".gitignore"
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-remote-theme
+remote_theme: mlresearch/jekyll-theme
+style: pmlr
+permalink: "/:title.html"
+ghub:
+  edit: true
+  repository: r6
+display:
+  copy_button:
+    bibtex: true
+    endnote: true
+    apa: true
+  comments: false
+volume_type: Reissue
+volume_dir: r6
+volume: R6
+email: ''
+conference:
+  name: Conference on Uncertainty in Artificial Intelligence
+  url:
+  location: the University of Helsinki City Centre Campus, Helsinki
+  dates:
+  - 2008-07-09
+  - 2008-07-10
+  - 2008-07-11
+  - 2008-07-12
+analytics:
+  google:
+    tracking_id: UA-92432422-1
+orig_bibfile: "/Users/neil/mlresearch/r6/uai2008.bib"
+# Site settings
+# Original source:  /Users/neil/mlresearch/r5/aistats2005.bib
