@@ -27,5 +27,4 @@ Series Editors:
 
 ## TODOs
 
-- [ ] issn is undefined in [`_config.yml`](./_config.yml).
 - [ ] the reissue date is tentative, currently `30 Oct. 2024`, in [`_config.yml`](./_config.yml).
