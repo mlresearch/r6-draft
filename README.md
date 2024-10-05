@@ -28,4 +28,3 @@ Series Editors:
 ## TODOs
 
 - [ ] the reissue date is tentative, currently `30 Oct. 2024`, in [`_config.yml`](./_config.yml).
-- [ ] Fix abstract and names in `_posts/*.md`
