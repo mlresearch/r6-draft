@@ -13,7 +13,7 @@ lastpage: 42
 page: 34-42
 order: 34
 cycles: false
-bibtex_editor: McAllester, David A. and Myllymäki, Petri
+bibtex_editor: McAllester, David A. and Myllym{"a}ki, Petri
 editor:
 - given: David A.
   family: McAllester
